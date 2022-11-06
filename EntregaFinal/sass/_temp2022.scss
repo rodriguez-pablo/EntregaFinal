@@ -1,0 +1,49 @@
+    
+    @mixin orientacionFlex($display, $direccion, $alineacion){
+        display: $display;
+        flex-direction: $direccion;
+        justify-content: $alineacion;
+    }
+
+    @mixin size($padding, $margen, $border) {
+        padding: $padding;
+        margin: $margen;
+        border: $border;
+    }
+    .pilotos{
+        grid-area: pilotos;
+        @include size(10%, $margin, 2px solid);
+    }
+    
+    .escuderias{
+        grid-area: escuderias;
+        @include size(10%, $margin, 2px solid);
+    }
+    
+    .tituloPilotos{
+        grid-area: tituloP;
+        @include orientacionFlex(flex, row, center);
+        margin-top: 50px;
+    }
+    
+    .tituloEscuderias{
+        grid-area: tituloE;
+        @include orientacionFlex(flex, row, center);
+        margin-top: 50px;
+    } 
+
+@media (min-width: 1000px){    
+    .tablas{
+        display: grid;
+        grid-template-areas: 
+        'tituloP tituloE'
+        'pilotos escuderias';
+    }
+}
+@media (max-width: 1000px){
+    .tablas{
+        @include orientacionFlex(flex, column, center);
+    }
+}
+
+

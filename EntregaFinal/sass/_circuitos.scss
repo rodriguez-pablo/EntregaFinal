@@ -1,0 +1,48 @@
+@import "vars";
+
+@mixin size($padding, $margen) {
+    padding: $padding;
+    margin: $margen;
+}
+
+.nombreCircuito{
+    @include size(10px, $margin);
+}
+
+.circuito{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include size(10px, $margin)
+}
+
+.datosDeCircuito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include size(10%, $margin)
+}
+
+
+@media (min-width: 1200px){
+    .gridsCircuitos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+@media (max-width: 700px){
+    .gridsCircuitos{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .circuito{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include size(10%, $margin)
+    }
+}

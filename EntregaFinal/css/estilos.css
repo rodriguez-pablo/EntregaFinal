@@ -1,0 +1,206 @@
+/* Estilo general del sitio */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+body {
+  background-color: #15151e;
+  color: aliceblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.logo {
+  width: 20%;
+  height: 80%;
+  padding: 10px #15151e;
+  background-color: #15151e;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Estilos aplicados en el index */
+.fotoPresentacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  width: 90%;
+  height: 90%;
+}
+
+.tituloBienvenida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+@media (min-width: 1200px) {
+  .bienvenida {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .bienvenida {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 10px;
+  }
+  .fotoPresentacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+  }
+}
+/* Estilos aplicados en Temporada 2022 */
+.pilotos {
+  grid-area: pilotos;
+  padding: 10%;
+  margin: 10px;
+  border: 2px solid;
+}
+
+.escuderias {
+  grid-area: escuderias;
+  padding: 10%;
+  margin: 10px;
+  border: 2px solid;
+}
+
+.tituloPilotos {
+  grid-area: tituloP;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tituloEscuderias {
+  grid-area: tituloE;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+@media (min-width: 1000px) {
+  .tablas {
+    display: grid;
+    grid-template-areas: "tituloP tituloE" "pilotos escuderias";
+  }
+}
+@media (max-width: 1000px) {
+  .tablas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+/* Estilos aplicados en Pilotos */
+.containerFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.colorTextCard {
+  color: black;
+}
+
+/* Estilos aplicados en circuitos */
+.nombreCircuito {
+  padding: 10px;
+  margin: 10px;
+}
+
+.circuito {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.datosDeCircuito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10%;
+  margin: 10px;
+}
+
+@media (min-width: 1200px) {
+  .gridsCircuitos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (max-width: 700px) {
+  .gridsCircuitos {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .circuito {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    margin: 10px;
+  }
+}
+/* Estilos aplicaados en escuderias */
+.gridEscuderias {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.datosEscudria {
+  text-align: center;
+}
+
+.nombreEsc {
+  text-align: center;
+}
+
+.contentEscuderia {
+  margin: 10px;
+}
+
+.fotoEsc {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1400px) {
+  .gridEscuderias {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .gridEscuderias {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .fotoEsc {
+    width: 90%;
+    height: 70%;
+  }
+  .contentEscuderia {
+    margin: 10px;
+  }
+}/*# sourceMappingURL=estilos.css.map */

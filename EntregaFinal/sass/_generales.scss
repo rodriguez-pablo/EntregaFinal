@@ -1,0 +1,27 @@
+@import "vars";
+
+body{
+    background-color: $colorfondo;
+    color: aliceblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 20%;
+    height: 80%;
+    padding: 10px $colorfondo;
+    background-color: $colorfondo;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 

@@ -1,0 +1,41 @@
+@import "vars";
+
+@mixin orientacionGrid($display, $cols, $margen){
+    display: $display;
+    grid-template-columns: $cols;
+    margin: $margen;
+}
+
+@mixin orientacionFlex($display, $direccion, $alineacion, $margen){
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $alineacion;
+    margin: $margen;
+}
+
+.fotoPresentacion{
+    @include orientacionFlex(flex, row, center, $margin);
+    width: 90%;
+    height: 90%
+}
+
+.tituloBienvenida{
+    @include orientacionFlex(flex, row, center, $margin);
+}
+
+
+@media (min-width: 1200px){
+    .bienvenida{
+        @include orientacionGrid(grid, 50% 50%, $margin)
+    }
+}
+
+@media (max-width: 600px){
+    .bienvenida{
+        @include orientacionGrid(grid, 100%, $margin)
+    }
+
+    .fotoPresentacion{
+        @include orientacionFlex(flex, row, center, $margin);
+    }
+}

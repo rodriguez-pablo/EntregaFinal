@@ -1,0 +1,45 @@
+.gridEscuderias{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.datosEscudria{
+    text-align: center;
+}
+
+.nombreEsc{
+    text-align: center;
+}
+
+.contentEscuderia{
+    margin: $margin;
+}
+
+.fotoEsc{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media (max-width: 1400px){
+    .gridEscuderias{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .gridEscuderias{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .fotoEsc{
+        width: 90%;
+        height: 70%;
+    }
+    .contentEscuderia{
+        margin: $margin;
+    }
+}
